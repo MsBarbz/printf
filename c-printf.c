@@ -5,8 +5,7 @@ int _printf(const char *format, ...)
 	int count=0;
 	va_list args;
 
-	if(format == NULL)
-
+	if(*format == '\0')
 	{
 		return (-1);
 	}
@@ -66,9 +65,7 @@ int _printf(const char *format, ...)
  */
 int main(void)
 {
-	int len;
-    
-	len = _printf("Let's try to printf a simple sentence.\n");
+	_printf("Let's try to printf a simple sentence.\n");
 	return 0;
 }
 	
